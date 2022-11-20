@@ -1,0 +1,39 @@
+{
+  "name": "node-initial-environment",
+  "version": "1.0.0",
+  "description": "Setting a initial environment to develop on node platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "npm run build && node dist/server.js",
+    "start:dev": "babel-node src/server.js",
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
+    "test": "echo \"Error: no test specified\" && exit 1 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorge-William/node-initial-environment.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Jorge William",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorge-William/node-initial-environment/issues"
+  },
+  "homepage": "https://github.com/Jorge-William/node-initial-environment#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/node": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "chai": "^4.3.7",
+    "mocha": "^6.2.3",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
