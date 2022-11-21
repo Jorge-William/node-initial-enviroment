@@ -4,7 +4,7 @@ class ProductController {
             [
                 {
                     name: 'Default product',
-                    description: 'product description',
+                    description: 'Default description',
                     price: 100
                 }
             ]
